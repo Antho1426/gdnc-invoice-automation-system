@@ -1,0 +1,54 @@
+{
+    "1": {
+        "name": "Pack \"Shérif\"",
+        "price": 10000
+    },
+    "2": {
+        "name": "Pack \"Cow-Boy\"",
+        "price": 7500
+    },
+    "3": {
+        "name": "Pack \"Bandit\"",
+        "price": 3000
+    },
+    "4": {
+        "name": "Pack \"Sioux\"",
+        "price": 1500
+    },
+    "5": {
+        "name": "Livret de fête - 1 page",
+        "price": 650
+    },
+    "6": {
+        "name": "Livret de fête - 1/2 page",
+        "price": 350
+    },
+    "7": {
+        "name": "Livret de fête - 1/4 page",
+        "price": 200
+    },
+    "8": {
+        "name": "Livret de fête - 1/8 page",
+        "price": 100
+    },
+    "9": {
+        "name": "Bâche publicitaire sur place de fête",
+        "price": 800
+    },
+    "10": {
+        "name": "Bâche publicitaire sur places de sport",
+        "price": 400
+    },
+    "11": {
+        "name": "Logo et lien sur site web",
+        "price": 400
+    },
+    "12": {
+        "name": "Logo sur sets de table",
+        "price": 500
+    },
+    "13": {
+        "name": "Logo sur t-shirts",
+        "price": 2000
+    }
+}
