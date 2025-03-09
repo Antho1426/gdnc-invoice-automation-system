@@ -1,0 +1,10 @@
+# Folders
+2025-03-05_OneDriveFiles
+investigations
+resources
+src/out
+
+# Files
+.DS_Store
+Icon?
+src/lib/sponsor_database.xlsx
