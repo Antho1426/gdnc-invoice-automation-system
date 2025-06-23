@@ -456,7 +456,6 @@ def generate_invoice(entry: Dict[str, Any]) -> Dict[str, Any]:
 
     # Update status label
     print("\t\t\t> Select invoice template...")
-    template_path = LIB_PATH / INVOICE_MODELS_FOLDER_NAME / f"InvoiceModel_CH95_DefaultProducts_{num_total_products}.docx"
     doc = docx.Document(template_path)
 
     product_key = "[PRODUCT-DESCRIPTION-IDX]"
