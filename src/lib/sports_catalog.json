@@ -1,0 +1,14 @@
+{
+    "1": {
+        "name": "Volley Mixte",
+        "price": 40
+    },
+    "2": {
+        "name": "Pétanque",
+        "price": 30
+    },
+    "3": {
+        "name": "Tir à la Corde",
+        "price": 40
+    }
+}
