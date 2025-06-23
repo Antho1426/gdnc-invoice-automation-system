@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python Debugger: Generate and send sport invoices",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/bin/generate_and_send_sport_invoices.py",
+      "console": "integratedTerminal",
+      "python": "/Users/anthony/miniconda3/envs/automation-env/bin/python",
+      "args": [
+        "--debug",
+      ]
+    },
+  ]
+}

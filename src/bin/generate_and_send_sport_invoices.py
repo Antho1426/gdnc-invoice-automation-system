@@ -205,22 +205,12 @@ def compose_email(registrer_dict: dict) -> str:
     :return email_message: A string containing the email text to send.
     """
         
-    current_hour = datetime.now().hour
     current_day = datetime.now().weekday()  # Monday = 0, Tuesday = 1, Wednesday = 2, Thursday = 3, Friday = 4, Saturday = 5, Sunday = 6
 
     inscriptions = registrer_dict["custom product"]
     inscription_list = [next(iter(inscriptions[i].values()))['description'] for i in range(len(inscriptions))]
     inscription_list_formatted = "\n\n".join(f"    • {desc}" for desc in inscription_list)
-    email_template = f"[GREETING] [LAST-NAME],\n\n\nMerci beaucoup pour votre intérêts aux sports du Giron du Nord 2025 à Concise! Suite à votre récente inscription, nous vous envoyons la facture conformément aux équipes que vous avez inscrites aux différentes disciplines.\n\n\nPour rappel, voici un résumé des sports auxquels vous vous êtes inscrits:\n\n{inscription_list_formatted}\n\n\nNous restons à votre entière disposition pour toute précision. Merci encore beaucoup pour votre inscriptions!\n\n\nMeilleures salutations et [CLOSING],\n\n\nAnthony Guinchard\n\nCommission Finances\n\nGiron du Nord 2025 à Concise"
-
-    class Greeting(Enum):
-        MORNING = "Bonjour"
-        EVENING = "Bonsoir"
-
-    if current_hour < 18:
-        greeting = Greeting.MORNING.value
-    else:
-        greeting = Greeting.EVENING.value
+    email_template = f"Salut cher sportif!\n\n\nMerci beaucoup pour ton intérêt aux sports du Giron du Nord 2025 à Concise! Suite à ta récente inscription, nous t'envoyons maintenant la facture conformément à ton enregistrement aux différentes disciplines.\n\n\nPour rappel, voici un résumé des sports auxquels tu t'es inscrits:\n\n{inscription_list_formatted}\n\n\nNous restons à ton entière disposition pour toute précision. Merci encore beaucoup pour ton enregistrement!\n\n\nMeilleures salutations et [CLOSING],\n\n\nAnthony Guinchard\n\nCommission Finances\n\nGiron du Nord 2025 à Concise"
     
     class Closing(Enum):
         START_OF_WEEK = "encore un bon début de semaine"
@@ -241,7 +231,7 @@ def compose_email(registrer_dict: dict) -> str:
         case 6: # Sunday
             closing = Closing.END_OF_WEEKEND.value
     
-    email_message = email_template.replace("[GREETING]", greeting).replace("[LAST-NAME]", registrer_dict["last name"]).replace("[CLOSING]", closing)
+    email_message = email_template.replace("[CLOSING]", closing)
     
     print(f"\t\t\t▷ Generated email message:\n---\n{email_message}\n---")
 
